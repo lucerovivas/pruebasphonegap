@@ -1,0 +1,583 @@
+@import "variables.styl"
+
+*
+  -webkit-tap-highlight-color rgba(0,0,0,0)
+  -webkit-user-select html
+  user-select html
+
+body
+  -webkit-text-size-adjust none
+  -webkit-touch-callout none
+  -webkit-user-select none
+  background-attachment fixed
+  background-color #0085B8 !important
+  font-family primary-font
+  font-size 16px
+  height 100%
+  margin 0px
+  padding 0px
+  width 100%
+
+// jquery ui overrides
+.ui-content
+  -webkit-overflow-scrolling touch
+  height 100%
+  overflow-y scroll
+  padding-bottom 0
+  padding-top 0
+
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper
+  background #0085B8
+
+.ui-grid-b>.ui-block-a, .ui-grid-b>.ui-block-b, .ui-grid-b>.ui-block-c 
+  text-align center  
+
+.ui-page-theme-a .ui-bar-inherit 
+  background none
+  border-bottom 1px solid light-color
+  & h1
+    color light-color
+    font-weight normal
+    text-shadow none
+
+.ui-panel.ui-panel-open
+  position fixed    
+
+.ui-panel-inner
+  -moz-box-sizing border-box
+  -webkit-overflow-scrolling touch
+  bottom 0
+  box-sizing border-box
+  height 100%
+  left 0
+  overflow-y scroll
+  position absolute
+  right 0
+  top 1px
+
+.ui-page-theme-a .tab
+  background none
+  border-color light-color
+  color light-color
+  font-family primary-font    
+  font-weight normal    
+  text-shadow none
+
+// my styles
+[data-role="page"]
+  background #0085B8
+
+#back_btn
+  border-radius .3125em
+  box-shadow none
+  display none
+  left .8em
+  margin-top -17.5px
+  padding .4em .46em
+  position absolute
+  top 50%
+  &:before
+    color #0085B8
+    color rgba(#0085B8, .8)
+    font-size 1.8em
+  &.ui-btn-active
+    background-color darken(#fefefe, 10%)
+    border-color darken(#fefefe, 20%)
+    color light-color
+    text-shadow none
+  &.block
+    display block             
+
+#chartCanvas
+  display block
+  margin .5em auto
+
+#close_btn
+  background transparent
+  border none
+  color light-color
+  margin-top -15px
+  padding .2em
+  text-align center
+  text-shadow none
+  top 50%
+  &:before
+    font-size 2em 
+  &.ui-btn-active
+    color darken(light-color, 20%)   
+
+#drug
+  margin 1em 0 
+  img
+    width 100%  
+
+#drug_chart
+  img
+    width 100%    
+
+#drug_item 
+  > .ui-content
+    -webkit-box-sizing border-box
+    box-sizing border-box
+    position relative
+
+#drug_info
+  text-shadow none
+  p
+    font-size 1em
+    margin-bottom 2em    
+
+#footer
+  text-align center
+
+#header, #footer
+  background light-color
+  height auto
+  padding .5em 0
+
+#home
+  -moz-background-size cover
+  background-size cover
+
+#info_panel
+  position fixed
+    
+#odc_info
+  margin-top -17.5px
+  padding .58em 1.1em
+  right .8em
+  top 50%
+  &:before
+    color #0085B8
+    color rgba(#0085B8, .8)
+    font-size 1.4em
+    font-weight normal
+  &.ui-btn-active
+    background-color darken(#fefefe, 10%)
+    border-color darken(#fefefe, 20%)
+    color light-color
+    text-shadow none      
+
+#pageHeader
+  border-top none
+  h1
+    font-size 1.2em
+    text-transform uppercase
+    font-family headlines-font
+    margin 0 10%    
+
+#panel_header
+  background #0085B8
+  color light-color 
+  
+#panel_title
+  font-size 1.2em
+  margin 0 auto
+  padding .5em 0      
+  text-shadow none
+  width 90%
+
+#share_btn
+  border-radius .3125em
+  width 35px
+  height 35px
+  background-color #f6f6f6
+  border-color #ddd 
+  margin-top -(@width/2)
+  top 50%
+  padding 6px
+  img
+    width 100% 
+
+#tabs
+  -webkit-box-sizing border-box
+  box-sizing border-box 
+  height auto
+  padding-left 0
+  padding-right 0
+  padding-top 10px
+  .tab
+    font-size .9em
+    color light-color
+    &:hover
+      color darken(@color, 90%)
+    &.ui-btn-active:hover
+      color light-color
+        
+
+.aditional_info
+  color light-color
+  font-size 1em
+  margin 1em 0
+  text-shadow none
+  display none
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+    font-family headlines-font
+    font-weight normal 
+
+  ul
+    list-style none
+    padding 0
+
+  .drug_label
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 1em;
+    border-bottom: 1px solid light-color;      
+
+.bold
+  font-weight bold 
+
+.drug_bg
+  -webkit-background-size cover
+  background-attachment fixed
+  background-position center center
+  background-size cover
+  height 100% 
+  left 0
+  position absolute
+  top 0
+  width 100%
+
+.drug_title
+  color light-color
+  font-weight normal
+  margin .3em 0
+  text-shadow none
+
+.drug_label
+  color light-color
+  position relative
+  text-shadow none 
+  text-transform none
+  white-space nowrap
+  &__interna + &__interna
+    margin-top 1em
+    
+
+.drug_statistic
+  border 2px solid light-color
+  border-raidus 9999px // android 2.3
+  border-radius 100%
+  height 20px
+  line-height 1
+  margin-top -16px
+  padding .3em
+  position absolute
+  right 0
+  text-align center 
+  top 50%
+  width 20px
+  &_num
+    font-size 1em 
+    left 50%
+    margin-left -.5em 
+    margin-top -.5em
+    position absolute
+    top 50%
+
+.drug_chart_title
+  color light-color
+  font-size 1em
+  font-weight normal
+  text-align center
+  text-shadow 1px 1px 0 rgba(0,0,0, .2)
+
+.ellipsis
+  color light-color 
+  display block
+  margin .5em 0
+  overflow hidden
+  text-overflow ellipsis
+  white-space nowrap
+
+.entidades
+  img
+    background darken(light-color, 8%)
+    display block
+    margin 0 auto
+    padding 5% 
+    width 90%
+    & + img
+      margin-top .2em
+
+.footer_logo  
+  display inline-block
+  vertical-align middle
+  width 28%
+  & + .footer_logo
+    margin-left 4%
+
+  & img
+    width 100%
+
+.hr
+  background #28328a    
+  height 3px
+  margin 6px auto
+  width 90%
+
+.home_title
+  color light-color
+  font-size 2em
+  font-weight normal
+  margin .67em 0
+  text-align center
+  text-shadow none
+
+.home_introduction
+  color light-color
+  font-size 1em
+  text-align center 
+  text-shadow none
+  text-transform none
+
+.legend
+  background #fafafa
+  & .title
+    font-size 1em   
+    text-shadow none
+    text-transform none
+
+// .marihuana_bg 
+//   background-image url(../img/marihuana.jpg) 
+
+.menu_btn_wrapper
+  padding 8px 0
+  width 100%
+
+.menu_btn
+  -moz-box-sizing border-box
+  border .2em solid light-color
+  border-radius 9999px // android 2.3
+  border-radius 50%
+  box-sizing border-box
+  display inline-block 
+  font-weight normal
+  margin 0 auto
+  padding-top 90%
+  position relative
+  text-align center
+  text-decoration none
+  width 90%
+  &:before
+    color light-color
+    font-size 3em
+    font-weight normal
+    left 50%
+    margin-left -24.5px
+    margin-top -24px
+    position absolute
+    text-shadow none
+    top 50%
+
+.menu_btn_link
+  display block
+  height 100%
+  text-decoration none
+  width 100%
+
+.odc_logo
+  display block
+  height auto
+  margin 0 auto
+  max-width 364px
+  padding 0
+  width 60%
+  & img
+    width 100%
+
+.panel_content
+  background darken(light-color, 1%)
+  margin-top 1em 
+  padding .5em
+
+.panel_list
+  list-style none
+  margin 0
+  padding 0
+  li
+    background darken(light-color, 8%)
+    padding .1em .4em
+    & + li
+      margin-top .2em
+    p
+      color lighten(#000, 5%)
+      margin .3em 0
+
+.panel-opened
+  overflow hidden       
+
+.panel_twitterIcon
+  display inline-block
+  height 24px
+  vertical-align middle
+  width 24px
+  img
+    width 100%         
+
+.panel_subtitle
+  font-size 1.2em         
+
+.red_point
+  -webkit-animation blinkbtn 2s infinite
+  animation blinkbtn 2s infinite
+  background silueta-btn
+  border-radius 9999px // android 2.3
+  border-radius 50%
+  box-shadow 0 0 12px 2px rgba(silueta-btn, .8)
+  height 30px
+  left 45%
+  position absolute
+  top 30%
+  transition all .2s ease
+  width 30px
+
+  &.cabeza
+    top -2%
+  &.boca
+    top 7%
+  &.garganta
+    top 12%
+  &.corazón,
+  &.corazon
+    left 64%
+    top 23%
+  &.estómago,
+  &.estomago
+    top 34%
+    left 47%
+  &.hígado,
+  &.higado
+    left 32%
+    top 30%
+  &.sistemarespiratorio
+    top 20%
+  &.sistemaarterial
+    left 57%
+    top 11%
+  &.ojos
+    left 38%
+    top 4%
+  &.torax
+    top 24%
+  &.pulmones
+    left 25%
+    top 22%
+  &.sistemaurinario
+    top 47%
+  &.sistemamusculatorio
+    left 90%
+    top 18%
+  &.sistemacardiovascular
+    left 44%
+    top 25%
+  &.otros
+    left 0
+    top 0
+  &.extremidades
+    left 0
+    top  49%
+
+  // to fix
+  &.sistemasarterial
+    display none
+.tab_body
+  -webkit-box-sizing border-box
+  box-sizing border-box
+  position relative    
+
+.silueta
+  display block
+  margin 0 auto  
+  max-width 280px
+  position relative 
+  width 100%
+  img
+    width 100%
+
+
+@keyframes blinkbtn {
+  0%{
+    background silueta-btn
+    box-shadow 0 0 12px 2px rgba(silueta-btn, .8)
+  }
+  50%{
+    background darken(silueta-btn, 30%)
+    box-shadow 0 0 12px 2px rgba(silueta-btn, .2)
+  }
+  100%{
+    background silueta-btn
+    box-shadow 0 0 12px 2px rgba(silueta-btn, .8)
+  }
+}    
+
+@media screen and (min-width: 480px)
+  .menu_btn
+    &:before
+      font-size 5em
+      margin-left - 40.5px
+      margin-top - 40px
+
+  .silueta
+    max-width 360px 
+
+  .red_point
+    left 46.5%
+    &.cabeza
+      top -1.5%
+    &.boca
+      top 7%
+    &.estómago,
+    &.estomago
+      left 48%
+    &.hígado,
+    &.higado
+      top 28%
+    &.sistemarespiratorio
+      top 20%
+    &.ojos
+      left 38%
+      top 4%
+    &.torax
+      top 24%
+    &.sistemaurinario
+      top 46%
+    &.sistemamusculatorio
+      left 90%
+      top 18%
+    &.sistemacardiovascular
+      left 46.5%
+    &.otros
+      left 0
+      top 0
+    &.extremidades
+      left 0
+      top  48%             
+
+@media screen and (min-width: 768px)
+  .menu_btn
+    &:before
+      font-size 7em
+      margin-left - 56.5px
+      margin-top - 56px
+
+  .silueta
+    max-width 400px       
+
+
+@media screen and (min-width: 1110px)
+  .menu_btn
+    padding-top 70%
+    width 70%
+    &:before
+      font-size 10em
+      margin-left - 80px
+      margin-top - 80px
+    
